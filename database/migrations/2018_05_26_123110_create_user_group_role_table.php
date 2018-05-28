@@ -12,7 +12,7 @@ class CreateUserGroupRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_user_group_role', function (Blueprint $table) {
+        Schema::create('user_group_role', function (Blueprint $table) {
             $table->increments('id')->comment('id');
             $table->integer('userGroupId')->unsigned()->comment('userGroupId');
             $table->integer('roleId')->unsigned()->comment('roleId');
@@ -29,6 +29,6 @@ class CreateUserGroupRoleTable extends Migration
      */
     public function down()
     {
-        Schema::drop('role_user_group_role');
+        Schema::drop('user_group_role');
     }
 }
