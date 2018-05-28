@@ -12,8 +12,9 @@ class CreateUserGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('userGroup', function (Blueprint $table) {
+        Schema::create('user_group', function (Blueprint $table) {
             $table->increments('id');
+            $table->char('userGroup',20)->comment('用户组');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ class CreateUserGroupTable extends Migration
      */
     public function down()
     {
-        Schema::drop('userGroup');
+        Schema::drop('user_group');
     }
 }

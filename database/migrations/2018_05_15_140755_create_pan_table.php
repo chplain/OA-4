@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePermissionTable extends Migration
+class CreatePanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,12 @@ class CreatePermissionTable extends Migration
      */
     public function up()
     {
-        Schema::create('Permission', function (Blueprint $table) {
+        Schema::create('pan', function (Blueprint $table) {
             $table->increments('id');
+            $table->char('filename',40)->comment('文件名');
+            $table->char('locate',30)->comment('文件位置');
+            $table->integer('userId')->unsigned()->comment('上传用户id');
+            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -25,6 +29,6 @@ class CreatePermissionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Permission');
+        Schema::drop('pan');
     }
 }
