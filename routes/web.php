@@ -34,10 +34,10 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('index',function(){
             return view('user.index');
         });
-        Route::get('note',function(){
+        Route::get('noteList',function(){
             return view('user.note');
         });
-        Route::get('plan',function(){
+        Route::get('planList',function(){
             return view('user.plan');
         });
         Route::get('pan',function(){
@@ -46,6 +46,13 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('userInfo',function(){
             return view('user.userInfo');
         });
+        Route::get('infoList',function(){
+            return view('user.info');
+        });
+        Route::get('addressBooks',function(){
+            return view('user.addressBooks');
+        });
+        Route::get('logout','UserController@logout');
     });
     /**
      * 后端管理页面路由
@@ -66,6 +73,7 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('userInfo',function(){
             return view('public.register');
         });
+
     });
 
 });
@@ -75,20 +83,40 @@ Route::group(['prefix'=>'/'],function(){
  */
 Route::group(['prefix'=>'api'],function(){
     /**
-     * 网盘
+     * 网盘API
      */
     Route::group(['prefix'=>'pan'],function(){
         Route::post('upload',function(){});
         Route::post('download',function(){});
         Route::post('delete',function(){});
-        Route::post('',function(){});
+        Route::post('update',function(){});
     });
     /**
-     * 用户信息
+     * 用户信息API
      */
    Route::group(['prefix'=>'user'],function(){
-       Route::post('login',function(){});
+       Route::post('login','UserController@login');
+//       Route::get('login','UserController@login');
        Route::post('register',function(){});
+       Route::post('update',function(){});
+       Route::post('delete',function(){});
+
    });
 
+   /**
+    * 个人日记API
+    */
+   Route::group(['prefix'=>'note'],function() {
+       Route::post('add',function(){});
+       Route::post('update',function(){});
+       Route::post('delete',function(){});
+   });
+    /**
+     * 通讯录API
+     */
+//   Route::group();
+//    /**
+//     * 短消息公告
+//     */
+//   Route::group();
 });

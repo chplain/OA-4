@@ -5,64 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>OA-Register</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
+    <link href="/css/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/public/css/register.css" rel="stylesheet">
 </head>
 <body>
 <div class="flex-center position-ref full-height">
@@ -77,18 +27,20 @@
         </div>
     @endif
 
-    <div class="content">
-        <div class="title m-b-md">
-            Laravel
-        </div>
-
-        <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-        </div>
+    <div class="signIn">
+        <div class="signIn-head"><img src="css/public/images/test/head_120.png" alt="" class="img-circle"></div>
+        <form class="form-signIn" role="form">
+            <input type="text" class="form-control" placeholder="请输入手机号" required autofocus />
+            <input type="text" class="form-control" placeholder="请输入邮箱" required  />
+            <input type="text" class="form-control" placeholder="请输昵称" required  />
+            <input type="password" class="form-control" placeholder="密码" required />
+            <input type="password" class="form-control" placeholder="请重复密码" required />
+            <input type="text" class="form-control" placeholder="请输入手机号或邮箱" required  />
+            <button class="btn btn-lg btn-warning btn-block" type="submit">注册</button>
+            {{--<label class="checkbox">--}}
+                {{--<input type="checkbox" value="remember-me"> 记住我--}}
+            {{--</label>--}}
+        </form>
     </div>
 </div>
 </body>
