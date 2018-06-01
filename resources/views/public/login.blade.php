@@ -32,7 +32,7 @@
     {{--@endif--}}
     <div class="signIn">
         <div class="signIn-head">
-            <img src="css/public/images/test/head_120.png" alt="" class="img-circle">
+            <img src="/user/test/head_120.png" alt="" class="img-circle">
         </div>
         <div class="form-signIn" role="form">
             <input type="text" name="account" class="form-control" placeholder="请输入手机号或邮箱" required autofocus />
@@ -53,11 +53,11 @@
 <script type="text/javascript">
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     function submit(){
-        data={account:$('input[name="account"]').val(), password:$('input[name="password"]').val()};
-        postdata(data);
+       var data={account:$('input[name="account"]').val(), password:$('input[name="password"]').val()};
+        postData(data);
     }
 
-    function postdata(data) {
+    function postData(data) {
         $.ajax({
             url:'/api/user/login',
             dataType:'JSON',
@@ -72,7 +72,6 @@
             }
         })
     }
-
 </script>
 </body>
 </html>

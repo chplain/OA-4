@@ -9,433 +9,112 @@
 ?>
 @extends('layout')
 @section('contents')
-            {{--<div class="am-g">--}}
-                {{--<!-- Row start -->--}}
+    <div class="am-g">
+        <!-- col start -->
+        <div class="am-u-md-12">
+            <div class="card-box">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
 
-                    {{--<link rel="stylesheet" href="css/common.css" type="text/css" />--}}
-                    {{--<link rel="stylesheet" href="css/index.css" type="text/css" />--}}
-                    {{--<link rel="stylesheet" href="css/my.css" type="text/css" media="screen" />--}}
-                    {{--<link rel="stylesheet" href="page/base.css" type="text/css" media="screen" />--}}
-                    {{--<link rel="stylesheet" href="page/pageGroup.css" type="text/css" media="screen" />--}}
-                {{--<div class="left-menu">--}}
-                    {{--<div class="left-menu-top">--}}
-                        {{--<a href="javascript:void(0)">--}}
-                            {{--<div class="left-menu-top-small">--}}
-                                {{--<img src="images/index_01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                        {{--<a href="javascript:void(0)">--}}
-                            {{--<div class="left-menu-top-small">--}}
-                                {{--<img src="images/index_02.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                    {{--<div class="left-menu-one">--}}
-                        {{--<a href="my.html">--}}
-                            {{--<div class="left-menu-one-small">--}}
-                                {{--<img src="images/index_03_1.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                        {{--<a href="zuijin.html">--}}
-                            {{--<div class="left-menu-one-small">--}}
-                                {{--<img src="images/index_05.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                    {{--<div class="left-menu-two">--}}
-                        {{--<a href="excel.html">--}}
-                            {{--<div class="left-menu-two-small">--}}
-                                {{--<img src="images/excel01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                        {{--<a href="ppt.html">--}}
-                            {{--<div class="left-menu-two-small">--}}
-                                {{--<img src="images/ppt01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                        {{--<a href="word.html">--}}
-                            {{--<div class="left-menu-two-small">--}}
-                                {{--<img src="images/word01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                    {{--<div class="left-menu-three">--}}
-                        {{--<a href="caogao.html">--}}
-                            {{--<div class="left-menu-three-small">--}}
-                                {{--<img src="images/caogaoxiang01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                        {{--<a href="lajixiang.html">--}}
-                            {{--<div class="left-menu-three-small">--}}
-                                {{--<img src="images/lajixiang01.png" />--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                    {{--<div class="left-menu-four">--}}
-                        {{--<div class="left-menu-four-small">--}}
-                            {{--<div class="left-menu-four-small-new"></div>--}}
-                        {{--</div>--}}
-                        {{--<div class="contain_four">--}}
-                            {{--<div class="contain_four_main">--}}
-                                {{--<span>容量：</span>--}}
-                                {{--<span class="cont">5</span>GB；可用--}}
-                                {{--<span class="use">3</span>GB--}}
-                            {{--</div>--}}
-                            {{--<div class="max_add">--}}
-                                {{--<button class="max_container">升级容量</button>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="foot">--}}
-                        {{--<a href="">返回意见</a>丨--}}
-                        {{--<a href="">帮助中心</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+                    <div class="row">
+                        <div id="actions" class="col-md-12">
+                            <div id="new_file" class="btn btn-default">
+                                <form id="upload" enctype="multipart/form-data">
+                                    <label class="" for="fileupload">
+                                        <span class="glyphicon glyphicon-cloud-upload upload-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Upload</span>
+                                    </label>
 
+                                    <input id="fileupload" type="file" name="files[]" data-toggle="tooltip" data-placement="bottom" title="Max File Size:{{-- {{{ $maxFileSize }}}--}}" multiple>
 
-                {{--<div id="right-content" class="right-content">--}}
-                    {{--<div class="content">--}}
-                        {{--<div id="page_content">--}}
-                            {{--<div class="zuijinTop cl">--}}
-                                {{--<img src="images/xiazai.png" class="xiazai z" alt="">--}}
-                                {{--<img src="images/yidong.png" class="yidong z" alt="">--}}
-                                {{--<img src="images/chong.png" class="chong z" alt="">--}}
-                                {{--<img src="images/shanchu.png" class="shanchu z" alt="">--}}
-                                {{--<img src="images/xinjian.png" class="xin z" alt="">--}}
-                                {{--<div class="sousuo y">--}}
-                                    {{--<div class="ss1 z"></div>--}}
-                                    {{--<input type="text" placeholder="请输入关键字搜索文件" class="z sousouInput" />--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<div class="zuijinTitle cl">--}}
-                                {{--<img src="images/select.png" data-all="no" class="z allIcon allSelect" alt="">--}}
-                                {{--<div class="z the">我的文档</div>--}}
-                                {{--<div class="z the">人事</div>--}}
-                            {{--</div>--}}
-                            {{--<div class="content cl" style="padding-left: 2%;height:500px;overflow-y:auto;pisition:relative;">--}}
-                                {{--<div class="box template" data-show="no">--}}
-                                    {{--<img src="images/wenjian.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理合同管理合同管理合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                                {{--<div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon2.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                                {{--<div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon1.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                                {{--<div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                                {{--<div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                                {{--<div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div><div class="box2 template" data-show="no">--}}
-                                    {{--<img src="images/icon3.png" class="icon" alt="">--}}
-                                    {{--<div>--}}
-                                        {{--<p>合同管理</p>--}}
-                                        {{--<input type="text" class="none">--}}
-                                    {{--</div>--}}
-                                    {{--<img src="images/select.png" class="select" alt="">--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<div style='width:90%;position:fixed;bottom:10px;margin:auto'>--}}
-                                {{--<div id="pageGro" class="cb">--}}
-                                    {{--<div class="pageUp">上一页</div>--}}
-                                    {{--<div class="pageList">--}}
-                                        {{--<ul>--}}
-                                            {{--<li>1</li>--}}
-                                            {{--<li>2</li>--}}
-                                            {{--<li>3</li>--}}
-                                            {{--<li>4</li>--}}
-                                            {{--<li>5</li>--}}
-                                        {{--</ul>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="pageDown">下一页</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+                                    <input type="hidden" name="_method" value="PUT">
 
-                            {{--<div class="moveBox none">--}}
-                                {{--<div class="moveTitle">--}}
-                                    {{--<span>移动到</span>--}}
-                                {{--</div>--}}
-                                {{--<div class="closeMove">+</div>--}}
-                                {{--<div class="wenjian cl">--}}
-                                    {{--<img src="images/icon3.png" class="z" alt="">--}}
-                                    {{--<p class="z name">劳动合同XX</p>--}}
-                                    {{--<p class="z size">29.8K</p>--}}
-                                {{--</div>--}}
-                                {{--<div class="urlBox">--}}
-                                    {{--<div class="urlBoxTitle">--}}
-                                        {{--选择目标文件夹--}}
-                                    {{--</div>--}}
-                                    {{--<div class="contentMain cl">--}}
-                                        {{--<div class="templateUrl z">--}}
-                                            {{--<div class="arrow z none"></div>--}}
-                                            {{--<img src="images/wenjian.png" class="z" alt="">--}}
-                                            {{--<p class="z">我的文档</p>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="templateUrl z">--}}
-                                            {{--<div class="arrow z"></div>--}}
-                                            {{--<img src="images/wenjian.png" class="z" alt="">--}}
-                                            {{--<p class="z">我的文档</p>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="templateUrl z">--}}
-                                            {{--<div class="arrow z"></div>--}}
-                                            {{--<img src="images/wenjian.png" class="z" alt="">--}}
-                                            {{--<p class="z">我的文档</p>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<input type="button" class="y quxiao" value="取消">--}}
-                                {{--<input type="button" class="y ok" value="确定">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+                                    <input type="hidden" name="dirPath" value="{{--{{{ $path }}}--}}">
 
-                {{--<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>--}}
-                {{--<script type="text/javascript" src="page/pageGroup.js"></script>--}}
-                {{--<script type="text/javascript" src="js/index.js"></script>--}}
-                {{--<script>--}}
-                    {{--$(".sousouInput").blur(function(){--}}
-                        {{--$(".sousuo").css({--}}
-                            {{--border:"1px solid #ccc"--}}
-                        {{--});--}}
-                        {{--$(".ss1").removeClass("focusState");--}}
-                    {{--});--}}
-                    {{--$(".sousouInput").focus(function(){--}}
-                        {{--$(".sousuo").css({--}}
-                            {{--border:"1px solid #9cf"--}}
-                        {{--});--}}
-                        {{--$(".ss1").addClass("focusState");--}}
-                    {{--});--}}
-                    {{--$(".zuijinTitle").css({--}}
-                        {{--width:$(window).width()-237--}}
-                    {{--});--}}
-                    {{--$(".content").css({--}}
-                        {{--width:$(window).width()-237--}}
-                    {{--});--}}
+                                </form>
+                            </div>
+                            <button id="new_folder" type="button" class="btn btn-default" aria-label="New Folder">
+                                <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> New Folder
+                            </button>
+                            <button id="delete_object" type="button" class="btn btn-default" aria-label="Delete Objects">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                    {{--$("#page_content").css({--}}
-                        {{--width:$(window).width()-237--}}
-                    {{--});--}}
+                <div class="container-fluid">
+                    <div id="file_system" class="row" data-dirpath="{{--{{{ $path }}}--}}" data-maxfilesize="{{--{{{ $maxFileSizeBytes }}}--}}">
+{{--                        @foreach ($objects as $object)--}}
+                            <div class="col-xs-4 col-sm-3 col-md-2 object-container">
+                                <div class="object" data-filetype="{{--{{{ $object->type }}}--}}" data-fullpath="{{--{{{ $object->path }}}--}}" data-ext="" data-basename="{{--{{{ $object->pathinfo['basename'] }}}--}}">
+                                    <div class="icon-container">
 
-                    {{--$(".allIcon").click(function(){--}}
-                        {{--if($(this).attr("data-all")=="yes"){--}}
-                            {{--$(this).attr("src","images/select.png");--}}
-                            {{--$(".select").attr("src","images/select.png");--}}
-                            {{--$(this).attr("data-all","no");--}}
-                            {{--$(".template").attr("data-show","no");--}}
-                            {{--$(".template").removeClass("box2H");--}}
-                        {{--}else{--}}
-                            {{--$(this).attr("src","images/selectC.png");--}}
-                            {{--$(".template").attr("data-show","yes");--}}
-                            {{--$(this).attr("data-all","yes");--}}
-                            {{--$(".template").addClass("box2H");--}}
-                            {{--$(".select").attr("src","images/selectC.png");--}}
-                        {{--}--}}
-                    {{--});--}}
+                                        <div class="icon-base{{-- {{{ $object->type }}}--}}"></div>
 
-                    {{--bindMyClick();--}}
-
-                    {{--function  bindMyClick(){--}}
-                        {{--$(".content .template").each(function(){--}}
-                            {{--$(this).click(function(){--}}
-                                {{--if($(this).attr("data-show")=="yes"){--}}
-                                    {{--$(this).removeClass(".box2C");--}}
-                                    {{--$(this).removeClass(".box2H");--}}
-                                    {{--$(this).find(".select").attr("src","images/select.png");--}}
-                                    {{--$(this).attr("data-show","no");--}}
-{{--//                   $(this).find(".select").hide();--}}
-                                {{--}else {--}}
-                                    {{--$(this).addClass(".box2C");--}}
-                                    {{--$(this).addClass(".box2H");--}}
-                                    {{--$(this).find(".select").attr("src","images/selectC.png");--}}
-                                    {{--$(this).attr("data-show","yes");--}}
-                                    {{--$(this).find(".select").show();--}}
-                                {{--}--}}
-                            {{--});--}}
-                        {{--});--}}
-                    {{--}--}}
-
-
-                    {{--$(".contentMain .templateUrl").each(function(e){--}}
-                        {{--$(".contentMain .templateUrl").eq(e).click(function(){--}}
-                            {{--$(".contentMain p").removeClass("templateUrlClickP");--}}
-                            {{--$(".contentMain p").eq(e).addClass("templateUrlClickP");--}}
-                        {{--});--}}
-                    {{--});--}}
-
-                    {{--$(".yidong").click(function(){--}}
-                        {{--$(".moveBox").show();--}}
-                    {{--});--}}
-                    {{--$(".closeMove,.ok,.quxiao").click(function(){--}}
-                        {{--$(".moveBox").hide();--}}
-                    {{--});--}}
-                {{--</script>--}}
-{{----}}
-                {{--<script type="text/javascript" src="http://www.sucainiu.com/themes/jsApi/demoAd/01.js" charset="UTF-8"></script>--}}
-{{----}}
-
-
-                {{--<!-- Row end -->--}}
+                                        <div class="icon-main"></div>
+                                    </div>
+                                    <div class="name-container">
+                                        <div role="button" class="name text-primary" title="{{--{{{ $object->pathinfo['basename'] }}}--}}">
+                                            <a class="link" href="{{--{{{ $object->url }}}--}}">{{--{{{ $object->basename }}}--}}</a>
+                                            <a href="#" class="hide rename"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></a>
+                                        </div>
+                                        <div class="meta-info text-muted">{{--{{{ $object->lastModified }}}--}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                      {{--  @endforeach--}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- col end -->
+    </div>
+    {{--<nav class="navbar navbar-default">--}}
+        {{--<div class="container-fluid">--}}
+            {{--<div class="navbar-header">--}}
+                {{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">--}}
+                    {{--<span class="sr-only">Toggle Navigation</span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                {{--</button>--}}
+                {{--<a class="navbar-brand" href="{{ url('/home') }}">File Manager</a>--}}
             {{--</div>--}}
 
+            {{--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">--}}
+                {{--<ul class="nav navbar-nav navbar-right">--}}
+                    {{--@if (Auth::guest())--}}
+                        {{--<li><a href="{{ url('/auth/login') }}">Login</a></li>--}}
+                        {{--<li><a href="{{ url('/auth/register') }}">Register</a></li>--}}
+                    {{--@else--}}
+                        {{--<li class="dropdown">--}}
+                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>--}}
+                            {{--<ul class="dropdown-menu" role="menu">--}}
+                                {{--<li><a href="{{ url('/auth/logout') }}">Logout</a></li>--}}
+                            {{--</ul>--}}
+                        {{--</li>--}}
+                    {{--@endif--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</nav>--}}
+
+    {{--@yield('content')--}}
+
+
+
+    <!-- Scripts -->
+    {{--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>--}}
+    {{--<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>--}}
+    {{--<script src="{{{ asset('/js/app.js') }}}"></script>--}}
+    @endsection
 

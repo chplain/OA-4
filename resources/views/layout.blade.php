@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/css/user/page/typography.css" />
     <link rel="stylesheet" href="/css/user/page/form.css" />
     <link rel="stylesheet" href="/css/user/component.css" />
+    <link rel="stylesheet" href="/css/user/app.css" />
 </head>
 <body>
 <!-- Begin page -->
@@ -150,6 +151,7 @@
 <script type="text/javascript" src="/css/user/js/blockUI.js" ></script>
 <script type="text/javascript" src="/css/user/js/charts/echarts.min.js" ></script>
 <script type="text/javascript" src="/css/user/js/charts/indexChart.js" ></script>
+<script type="text/javascript" src="/css/user/js/app1.js" ></script>
 <script type="text/javascript">
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
 </script>
