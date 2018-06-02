@@ -49,12 +49,13 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('userInfo',function(){
             return view('user.userInfo');
         });
+        Route::get('modifyUserInfo',function(){
+            return view('user.modifyUserInfo');
+        });
         Route::get('infoList',function(){
             return view('user.info');
         });
-        Route::get('addressBooks',function(){
-            return view('user.addressBooks');
-        });
+        Route::get('addressBooks','addressBooksController@getList');
         Route::get('logout','UserController@logout');
     });
     /**

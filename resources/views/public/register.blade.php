@@ -48,16 +48,14 @@
 <script type="text/javascript">
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     function submit(){
-
         var data={
             nickname:$('input[name="nickname"]').val(),
             password:$('input[name="password"]').val(),
             email:$('input[name="email"]').val(),
             sex:$('input[name="sex"]').val(),
             phone:$('input[name="phone"]').val(),
-            avatar:"css/public/images/test/head_120.png"
+            avatar:"/user/test/head_120.png"
         };
-        alert("123");
 
         postData(data);
     }

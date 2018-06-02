@@ -87,7 +87,13 @@
                 <li><a href="/user/pan"><span class="am-icon-home"></span>网盘</a></li>
                 <li><a href="/user/addressBooks"><span class="am-icon-home"></span>通讯录</a></li>
                 <li><a href="/user/infoList"><span class="am-icon-home"></span>消息列表</a></li>
-                <li><a href="/user/planList"><span class="am-icon-home"></span>生产计划</a></li>
+                <li class="admin-parent">
+                    <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav0'}"><span class="am-icon-table"></span>生产计划<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav0">
+                        <li><a href="/user/planList" class="am-cf"> 生产计划列表</a></li>
+                        <li><a href="/user/addplan">增加生产计划</a></li>
+                    </ul>
+                </li>
                 <li class="admin-parent">
                     <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span>个人日记 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
