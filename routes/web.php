@@ -31,24 +31,21 @@ Route::group(['prefix'=>'/'],function(){
      * 用户相关路由页面
      */
     Route::group(['prefix'=>'user'],function(){
-        Route::get('index',function(){
-            return view('user.index');
-        });
+        Route::get('index','UserController@index');
         Route::get('noteList',function(){
             return view('user.note');
         });
         Route::get('addNote',function(){
             return view('user.addNote');
         });
-        Route::get('planList',function(){
-            return view('user.plan');
+        Route::get('planList','planController@getPlanlist');
+        Route::get('addPlan',function(){
+            return view('user.addPlan');
         });
         Route::get('pan',function(){
             return view('user.pan');
         });
-        Route::get('userInfo',function(){
-            return view('user.userInfo');
-        });
+        Route::get('userInfo/{id}','UserController@userInfo');
         Route::get('modifyUserInfo',function(){
             return view('user.modifyUserInfo');
         });
