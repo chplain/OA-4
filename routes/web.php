@@ -42,6 +42,7 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('addPlan',function(){
             return view('user.addPlan');
         });
+        Route::get('plan','planController@getPlan');
         Route::get('pan',function(){
             return view('user.pan');
         });

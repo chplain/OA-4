@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Session;
 class UserController extends Controller
 {
     public function index(){
+        //获取用户列表
         $users=DB::table('users')
             ->select('nickname','id','avatar','phone','email','sex')
             ->where('id','<>',session::get('userId'))
             ->orderBy('id', 'desc')
             ->limit(4)
             ->get();
+        //获取生产计划列表
         $plans=DB::table('plan')
             ->select('plan.id','plan.title','plan.created_at','plan.deadTime','plan.status','users.nickname as executor')
             ->leftJoin('users','plan.creatorId','=','users.id')
@@ -33,13 +35,17 @@ class UserController extends Controller
     {
         $data=[];
         if (isset($_REQUEST)&&!empty($_REQUEST)) {
-            $user = DB::table("users")->where([['email', $_REQUEST['account']], ['password', $_REQUEST['password']]])->orWhere([['phone', $_REQUEST['account']], ['password', $_REQUEST['password']]])->count();
+            $user = DB::table("users")
+                ->where([['email', $_REQUEST['account']], ['password', $_REQUEST['password']]])
+                ->orWhere([['phone', $_REQUEST['account']], ['password', $_REQUEST['password']]])
+                ->count();
             if ($user>0){
                 $userInfo = DB::table("users")
                     ->select('users.id','users.nickname','users.avatar','users.sex','user_user_group.userGroupId')
                     ->leftJoin('user_user_group','user_user_group.userId','=','users.id')
                     ->where([['email', $_REQUEST['account']], ['password', $_REQUEST['password']]])->orWhere([['phone', $_REQUEST['account']], ['password', $_REQUEST['password']]])
                     ->get()->toArray();
+                //将用户的信息写入session中
                  session::put('userId',$userInfo[0]->id);
                  session::put('nickname',$userInfo[0]->nickname);
                  session::put('avatar',$userInfo[0]->avatar);
@@ -60,9 +66,10 @@ class UserController extends Controller
     public function logout()
     {
         if (!empty(session::get('userId'))){
+            //删除用户session
             session::pull('userId');
         }
-        session::pull('userId');
+//        session::pull('userId');
         header('location:/');
     }
 
@@ -73,11 +80,21 @@ class UserController extends Controller
     {
         $data=[];
         if (isset($_REQUEST)&&!empty($_REQUEST)) {
-            $id=DB::table('users')->insertGetId(['nickname'=>$_REQUEST['nickname'],'phone'=>$_REQUEST['phone'],'sex'=>$_REQUEST['sex'],'password'=>$_REQUEST['password'],'email'=>$_REQUEST['email'],'avatar'=>$_REQUEST['avatar'],'created_at'=>date("Y-m-d H:i:s"),'updated_at'=>date("Y-m-d H:i:s")]);
+            $id=DB::table('users')
+                ->insertGetId(
+                    ['nickname'=>$_REQUEST['nickname'],
+                     'phone'=>$_REQUEST['phone'],
+                     'sex'=>$_REQUEST['sex'],
+                     'password'=>$_REQUEST['password'],
+                     'email'=>$_REQUEST['email'],
+                     'avatar'=>$_REQUEST['avatar'],
+                     'created_at'=>date("Y-m-d H:i:s"),
+                     'updated_at'=>date("Y-m-d H:i:s")]
+                );
             if($id){
                 $data=array("status"=>200,'info'=>'创建成功');
             }else{
-                $data=array("status"=>900,"info"=>"手机号后邮箱已经被占用");
+                $data=array("status"=>900,"info"=>"手机号或邮箱已经被占用");
             }
         }else{
             $data=array("status"=>901,"info"=>"HTTP REQUEST ERROR");
@@ -91,8 +108,17 @@ class UserController extends Controller
     {
         $data=[];
         if (isset($_REQUEST)&&!empty($_REQUEST)) {
-            $id=DB::table('users')->where('id',
-                $_REQUEST['id'])->update(['nickname'=>$_REQUEST['nickname'],'phone'=>$_REQUEST['phone'],'sex'=>$_REQUEST['sex'],'password'=>$_REQUEST['password'],'email'=>$_REQUEST['email'],'avatar'=>$_REQUEST['avatar'],'update_at'=>date("Y-m-d H:i:s")]);
+            $id=DB::table('users')
+                ->where('id', $_REQUEST['id'])
+                ->update(
+                    ['nickname'=>$_REQUEST['nickname'],
+                     'phone'=>$_REQUEST['phone'],
+                     'sex'=>$_REQUEST['sex'],
+                     'password'=>$_REQUEST['password'],
+                     'email'=>$_REQUEST['email'],
+                     'avatar'=>$_REQUEST['avatar'],
+                     'update_at'=>date("Y-m-d H:i:s")
+                    ]);
             if($id){
                 $data=array("status"=>200,'info'=>'更新成功');
             }else{
