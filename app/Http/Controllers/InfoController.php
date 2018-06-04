@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class InfoController extends Controller
 {
     public function geInfoList(){
-        $planList=DB::table('note')
+        $planList=DB::table('Info')
             ->select('id','title','content','created_at')
-            ->where('userId','=',session::get('userId'))
+            ->where('touUserId','=',session::get('userId'))
             ->get();
         return view('user.note',['planList'=>$planList]);
     }
