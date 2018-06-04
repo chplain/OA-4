@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use EndaEditor;
 
 class planController extends Controller
 {
@@ -16,7 +17,7 @@ class planController extends Controller
             ->where('plan.executorId','=',session::get('userId'))
             ->orWhere('plan.creatorId','=',session::get('userId'))
             ->get();
-        return view('user.plan',['planList'=>$planList]);
+        return view('user.planList',['planList'=>$planList]);
     }
 
     public function addPlan(){
@@ -41,6 +42,7 @@ class planController extends Controller
                     ->leftJoin('users as b','plan.executorId','=','b.id')
                     ->where('plan.id','=',$id)
                     ->get();
+        $plan[0]->content=EndaEditor::MarkDecode($plan[0]->content);
         return view('user.plan',['plan'=>$plan]);
     }
     

@@ -26,13 +26,14 @@ class UserController extends Controller
             ->get();
             //获取生产计划列表
         $infos=DB::table('info')
-            ->select('info.id','info.content','info.created_at','users.nickname')
+            ->select('info.id','info.content','info.created_at','users.nickname','users.avatar')
             ->leftJoin('users','info.creatorId','=','users.id')
             ->where('info.toUserId','=',session::get('userId'))
             ->orderBy('info.id', 'desc')
             ->limit(4)
             ->get();
         return view('user.index',['users'=>$users,'plans'=>$plans,'infos'=>$infos]);
+//        return "123";
     }
 
     /**

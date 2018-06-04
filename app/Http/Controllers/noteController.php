@@ -10,15 +10,16 @@ use EndaEditor;
 class noteController extends Controller
 {
     public function getNoteList(){
-        $planList=DB::table('note')
-            ->select('id','title','content','created_at')
+        $noteList=DB::table('user_note')
+            ->select('user_note.id','user_note.title','user_note.created_at','users.avatar','users.nickname')
+            ->leftJoin('users','user_note.userId','=','users.id')
             ->where('userId','=',session::get('userId'))
             ->get();
-        return view('user.note',['planList'=>$planList]);
+        return view('user.noteList',['noteList'=>$noteList]);
     }
 
     public function addNote(){
-        $id=DB::table('note')
+        $id=DB::table('user_note')
             ->insertGetId(
                 [
                     'title'=>$_REQUEST['title'],
@@ -34,12 +35,20 @@ class noteController extends Controller
     }
 
     public function getNote($id){
-        $plan=DB::table('plan')
-            ->select('plan.id','plan.title','plan.content','plan.created_at','plan.deadTime','plan.status','users.nickname as executor','b.nickname as creator')
-            ->leftJoin('users','plan.creatorId','=','users.id')
-            ->leftJoin('users as b','plan.executorId','=','b.id')
-            ->where('plan.id','=',$id)
-            ->get();
-        return view('user.plan',['plan'=>$plan]);
+        $count=DB::table('user_note')
+            ->where([['id','=',$id],['userId','=',session::get('userId')]])
+            ->count();
+//        var_dump($count);
+        if ($count>0) {
+            $note = DB::table('user_note')
+                ->select('user_note.title', 'user_note.content', 'user_note.created_at', 'users.nickname')
+                ->leftJoin('users', 'user_note.userId', '=', 'users.id')
+                ->where('user_note.id', '=', $id)
+                ->get();
+            $note[0]->content=EndaEditor::MarkDecode($note[0]->content);
+            return view('user.note', ['note'=>$note]);
+        }else{
+            return "没有权限";
+        }
     }
 }

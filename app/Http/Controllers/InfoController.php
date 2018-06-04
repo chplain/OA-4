@@ -3,15 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class InfoController extends Controller
 {
     public function geInfoList(){
-        $planList=DB::table('Info')
-            ->select('id','title','content','created_at')
-            ->where('touUserId','=',session::get('userId'))
+        $infos=DB::table('info')
+            ->select('info.id','info.content','info.created_at','users.nickname','users.avatar')
+            ->leftJoin('users','info.creatorId','=','users.id')
+            ->where('info.toUserId','=',session::get('userId'))
+            ->orderBy('info.id', 'desc')
+            ->limit(4)
             ->get();
-        return view('user.note',['planList'=>$planList]);
+        return view('user.info',['infos'=>$infos]);
     }
 
     public function addInfo(){

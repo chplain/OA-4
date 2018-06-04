@@ -32,17 +32,16 @@ Route::group(['prefix'=>'/'],function(){
      */
     Route::group(['prefix'=>'user'],function(){
         Route::get('index','UserController@index');
-        Route::get('noteList',function(){
-            return view('user.note');
-        });
+        Route::get('noteList','noteController@getNoteList');
         Route::get('addNote',function(){
             return view('user.addNote');
         });
+        Route::get('note/{id}','noteController@getNote');
         Route::get('planList','planController@getPlanlist');
         Route::get('addPlan',function(){
             return view('user.addPlan');
         });
-        Route::get('plan','planController@getPlan');
+        Route::get('plan/{id}','planController@getPlan');
         Route::get('pan',function(){
             return view('user.pan');
         });
@@ -50,9 +49,7 @@ Route::group(['prefix'=>'/'],function(){
         Route::get('modifyUserInfo',function(){
             return view('user.modifyUserInfo');
         });
-        Route::get('infoList',function(){
-            return view('user.info');
-        });
+        Route::get('infoList','InfoController@geInfoList');
         Route::get('addressBooks','addressBooksController@getList');
         Route::get('logout','UserController@logout');
     });
