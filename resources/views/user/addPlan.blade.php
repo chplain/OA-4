@@ -9,6 +9,12 @@
 @section('title')
     OA-增加生产计划
 @endsection
+@section('import')
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.css"/>
+    @endsection
 @section('contents')
     <h4 class="header-title m-t-0 m-b-30">增加生产计划</h4>
     <form class="am-form">

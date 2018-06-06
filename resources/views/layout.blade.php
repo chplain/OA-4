@@ -28,11 +28,8 @@
     <link rel="stylesheet" href="/css/user/app.css" />
     <link rel="stylesheet" href="/css/user/zoom.css" />
     <script type="text/javascript" src="/css/user/js/jquery-2.1.0.js" ></script>
-    <link rel="stylesheet"
-          href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
-    <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.css"/>
+    @section('import')
+        @yield('import')
     <style>
         @section('style')
             @yield('style')
