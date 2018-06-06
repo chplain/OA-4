@@ -18,27 +18,34 @@ class noteController extends Controller
         return view('user.noteList',['noteList'=>$noteList]);
     }
 
+    /**
+     * 写日记
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function addNote(){
+        $data=[];
         $id=DB::table('user_note')
             ->insertGetId(
                 [
                     'title'=>$_REQUEST['title'],
                     'content'=>$_REQUEST['content'],
                     'created_at'=>date("Y-m-d H:i:s"),
-                    'update_at'=>date("Y-m-d H:i:s"),
-                    'executorId'=>session::get('userId')
+                    'updated_at'=>date("Y-m-d H:i:s"),
+                    'userId'=>session::get('userId')
                 ]
             );
         if (isset($id)){
-            return view();
+          $data=['status'=>200,'info'=>$id];
+        }else{
+            $data=['status'=>900,'info'=>'添加失败'];
         }
+        return json_encode($data);
     }
 
     public function getNote($id){
         $count=DB::table('user_note')
             ->where([['id','=',$id],['userId','=',session::get('userId')]])
             ->count();
-//        var_dump($count);
         if ($count>0) {
             $note = DB::table('user_note')
                 ->select('user_note.title', 'user_note.content', 'user_note.created_at', 'users.nickname')

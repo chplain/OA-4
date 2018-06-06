@@ -8,25 +8,11 @@
     <title>OA-Register</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
     <link href="/css/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/public/css/register.css" rel="stylesheet">
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-{{--
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
-            @endauth
-        </div>
-    @endif
---}}
     @if(Session::has('userId'))
         <?php header('location:/user/index');?>
     @endif
@@ -61,7 +47,6 @@
     }
 
     function postData(data) {
-        alert("12313");
         $.ajax({
             url:'/api/user/register',
             dataType:'JSON',

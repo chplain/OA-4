@@ -19,7 +19,7 @@
                 <span class="am-article-meta">执行人： {{$plan[0]->executor}}</span>
             </p>
             <p>
-                <span class="am-article-meta">发布日期 : {{$plan[0]->created_at}}</span> ----- 
+                <span class="am-article-meta">发布日期 : {{$plan[0]->created_at}}</span> -----
                 <span class="am-article-meta">截止日期 : {{$plan[0]->deadTime}}</span>
             </p>
         </div>

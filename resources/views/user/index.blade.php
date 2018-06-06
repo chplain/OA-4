@@ -67,7 +67,7 @@
                         @foreach($plans as $plan)
                             <tr>
                                 <td>{{$plan->id}}</td>
-                                <td>{{$plan->title}}</td>
+                                <td><a href="/user/plan/{{$plan->id}}">{{$plan->title}}</a></td>
                                 <td>{{$plan->created_at}}</td>
                                 <td>{{$plan->deadTime}}</td>
                                 <td><span class="label label-danger">已发布</span></td>

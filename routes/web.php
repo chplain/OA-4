@@ -33,10 +33,10 @@ Route::group(['prefix'=>'/'],function(){
     Route::group(['prefix'=>'user'],function(){
         Route::get('index','UserController@index');
         Route::get('noteList','noteController@getNoteList');
+        Route::get('note/{id}','noteController@getNote');
         Route::get('addNote',function(){
             return view('user.addNote');
         });
-        Route::get('note/{id}','noteController@getNote');
         Route::get('planList','planController@getPlanlist');
         Route::get('addPlan',function(){
             return view('user.addPlan');
@@ -98,14 +98,13 @@ Route::group(['prefix'=>'api'],function(){
        Route::post('register','UserController@register');
        Route::post('update','UserController@register');
        Route::post('delete','UserController@delete');
-
    });
 
    /**
     * 个人日记API
     */
    Route::group(['prefix'=>'note'],function() {
-       Route::post('add',function(){});
+       Route::post('add','noteController@addNote');
        Route::post('update',function(){});
        Route::post('delete',function(){});
    });

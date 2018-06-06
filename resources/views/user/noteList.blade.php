@@ -15,7 +15,6 @@
     <div class="am-g">
         <!-- col start -->
         <div class="am-u-md-16">
-            {{--<div class="card-box">--}}
                 <h4 class="header-title m-t-0 m-b-30">个人日记</h4>
                 <div class="inbox-widget nicescroll" style=" overflow: hidden; outline: none;" tabindex="5000">
                 @foreach ($noteList as $note)
@@ -29,7 +28,6 @@
                     </a>
                  @endforeach
                 </div>
-            {{--</div>--}}
         </div>
         <!-- col end -->
     </div>

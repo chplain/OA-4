@@ -26,7 +26,13 @@
     <link rel="stylesheet" href="/css/user/page/form.css" />
     <link rel="stylesheet" href="/css/user/component.css" />
     <link rel="stylesheet" href="/css/user/app.css" />
+    <link rel="stylesheet" href="/css/user/zoom.css" />
     <script type="text/javascript" src="/css/user/js/jquery-2.1.0.js" ></script>
+    <link rel="stylesheet"
+          href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.css"/>
     <style>
         @section('style')
             @yield('style')
@@ -70,16 +76,16 @@
                 <li><a href="/user/addressBooks"><span class="am-icon-home"></span>通讯录</a></li>
                 <li><a href="/user/infoList"><span class="am-icon-home"></span>收件箱</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav0'}"><span class="am-icon-table"></span>生产计划<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav0'}"><span class="am-icon-table"></span>计划本<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub " id="collapse-nav0">
-                        <li><a href="/user/planList" class="am-cf"> 生产计划列表</a></li>
-                        <li><a href="/user/addPlan">增加生产计划</a></li>
+                        <li><a href="/user/planList" class="am-cf"> 计划列表</a></li>
+                        <li><a href="/user/addPlan">增加计划</a></li>
                     </ul>
                 </li>
                 <li class="admin-parent">
-                    <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span>个人日记 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf am-collapsed " data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span>日记本 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub " id="collapse-nav1">
-                        <li><a href="/user/noteList" class="am-cf"> 个人日记列表</a></li>
+                        <li><a href="/user/noteList" class="am-cf"> 日记列表</a></li>
                         <li><a href="/user/addNote">写日记</a></li>
                     </ul>
                 </li>
@@ -91,28 +97,11 @@
                     </ul>
                 </li>
                 <li><a href="/user/logout"><span class="am-icon-home"></span>登出</a></li>
-                {{--<li class="admin-parent">--}}
-                {{--<a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><i class="am-icon-line-chart" aria-hidden="true"></i> 统计图表 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>--}}
-                {{--<ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav2">--}}
-                {{--<li><a href="html/chart_line.html" class="am-cf"> 折线图</span></a></li>--}}
-                {{--<li><a href="html/chart_columnar.html" class="am-cf"> 柱状图</span></a></li>--}}
-                {{--<li><a href="html/chart_pie.html" class="am-cf"> 饼状图</span></a></li>--}}
-                {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="admin-parent">--}}
-                {{--<a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> 表单 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>--}}
-                {{--<ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav5">--}}
-                {{--<li><a href="html/form_basic.html" class="am-cf"> 基本表单</a></li>--}}
-                {{--<li><a href="html/form_validate.html">表单验证</a></li>--}}
-                {{--</ul>--}}
-                {{--</li>--}}
             </ul>
         </div>
     </div>
     <!-- sidebar end -->
     <!-- ========== Left Sidebar end ========== -->
-
-    <!-- ============================================================== -->
     <!-- Start right Content here -->
     <div class="content-page" style="background-color: #EAEEF2">
         <!-- Start content -->
@@ -143,6 +132,10 @@
 <script type="text/javascript" src="/css/user/js/charts/echarts.min.js" ></script>
 <script type="text/javascript" src="/css/user/js/charts/indexChart.js" ></script>
 <script type="text/javascript" src="/css/user/js/app1.js" ></script>
+<script type="text/javascript" src="/css/user/js/zoom.js" ></script>
+<script type="text/javascript" src="/css/user/js/translate.js" ></script>
+<script src="https://unpkg.com/moment@2.22.1/min/moment-with-locales.min.js"></script>
+<script src="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.js"></script>
 <script type="text/javascript">
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
 </script>
