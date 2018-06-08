@@ -2,11 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: vaniot
- * Date: 18-5-28
- * Time: 下午11:49
- */
-
-?>
+ * Date: 18-6-8
+ * Time: 下午1:12
+ */?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,10 +28,10 @@
     <script type="text/javascript" src="/css/user/js/jquery-2.1.0.js" ></script>
     @section('import')
         @yield('import')
-    <style>
-        @section('style')
-            @yield('style')
-    </style>
+        <style>
+            @section('style')
+                @yield('style')
+        </style>
 </head>
 <body>
 @if(!Session::has('userId'))
@@ -102,7 +100,7 @@
                             {{--<li><a href="/user/modifyUserInfo">修改个人信息</a></li>--}}
                         </ul>
                     </li>
-                    @endif
+                @endif
                 <li><a href="/user/logout"><span class="am-icon-home"></span>登出</a></li>
             </ul>
         </div>
@@ -118,34 +116,31 @@
                 <!-- col start -->
                 <div class="am-u-md-12">
                     <div class="card-box">
-                     @section('content')
-                        @yield('contents')
+                        @section('content')
+                            @yield('contents')
                     </div>
                 </div>
+            </div>
         </div>
+        <!-- end right Content here -->
     </div>
-    <!-- end right Content here -->
-
-</div>
 
 
-<!-- navbar -->
-<a href="admin-offcanvas" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"><!--<i class="fa fa-bars" aria-hidden="true"></i>--></a>
-
-
-<script type="text/javascript" src="/css/user/js/amazeui.min.js"></script>
-<script type="text/javascript" src="/css/user/js/app.js" ></script>
-<script type="text/javascript" src="/css/user/js/blockUI.js" ></script>
-<script type="text/javascript" src="/css/user/js/charts/echarts.min.js" ></script>
-<script type="text/javascript" src="/css/user/js/charts/indexChart.js" ></script>
-<script type="text/javascript" src="/css/user/js/app1.js" ></script>
-<script type="text/javascript" src="/css/user/js/zoom.js" ></script>
-<script type="text/javascript" src="/css/user/js/translate.js" ></script>
-<script src="https://unpkg.com/moment@2.22.1/min/moment-with-locales.min.js"></script>
-<script src="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.js"></script>
-<script type="text/javascript">
-    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
-</script>
+    <!-- navbar -->
+    <a href="admin-offcanvas" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"><!--<i class="fa fa-bars" aria-hidden="true"></i>--></a>
+    <script type="text/javascript" src="/css/user/js/amazeui.min.js"></script>
+    <script type="text/javascript" src="/css/user/js/app.js" ></script>
+    <script type="text/javascript" src="/css/user/js/blockUI.js" ></script>
+    <script type="text/javascript" src="/css/user/js/charts/echarts.min.js" ></script>
+    <script type="text/javascript" src="/css/user/js/charts/indexChart.js" ></script>
+    <script type="text/javascript" src="/css/user/js/app1.js" ></script>
+    <script type="text/javascript" src="/css/user/js/zoom.js" ></script>
+    <script type="text/javascript" src="/css/user/js/translate.js" ></script>
+    <script src="https://unpkg.com/moment@2.22.1/min/moment-with-locales.min.js"></script>
+    <script src="https://unpkg.com/amazeui-datetimepicker-se@1.0.0-beta.1/dist/amazeui.datetimepicker-se.min.js"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+    </script>
 </body>
 
 </html>

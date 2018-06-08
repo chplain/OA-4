@@ -22,7 +22,7 @@
                         <div class="inbox-item">
                             <div class="inbox-item-img"><img src={{$note->avatar}} class="img-circle" alt=""></div>
                             <p class="inbox-item-author">{{$note->nickname}}</p>
-                            <p class="inbox-item-text">标题: {{$note->title}}</p>
+                            <p class="inbox-item-title">标题: {{$note->title}}</p>
                             <p class="inbox-item-date">{{$note->created_at}}</p>
                         </div>
                     </a>

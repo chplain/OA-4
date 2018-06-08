@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserGroupRoleTable extends Migration
+class CreateUserUserGroupRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,15 @@ class CreateUserGroupRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_group_role', function (Blueprint $table) {
+        Schema::create('user_user_group_role', function (Blueprint $table) {
             $table->increments('id')->comment('id');
+            $table->integer('userId')->unsigned()->comment('userGroupId');
             $table->integer('userGroupId')->unsigned()->comment('userGroupId');
             $table->integer('roleId')->unsigned()->comment('roleId');
             $table->foreign('userGroupId')->references('id')->on('user_group');
             $table->foreign('roleId')->references('id')->on('role');
-            $table->index(['roleId','userGroupId'])->unique();
+            $table->foreign('userId')->references('id')->on('users');
+            $table->index(['roleId','userGroupId','userId'])->unique();
         });
     }
 
@@ -29,6 +31,6 @@ class CreateUserGroupRoleTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_group_role');
+        Schema::drop('user_user_group_role');
     }
 }

@@ -20,16 +20,6 @@
    <?php header('location:/user/index');?>
 @endif
 <div class="flex-center position-ref full-height">
-    {{--@if (Route::has('login'))--}}
-        {{--<div class="top-right links">--}}
-            {{--@auth--}}
-                {{--<a href="{{ url('/home') }}">Home</a>--}}
-            {{--@else--}}
-                {{--<a href="{{ route('login') }}">Login</a>--}}
-                {{--<a href="{{ route('register') }}">Register</a>--}}
-            {{--@endauth--}}
-        {{--</div>--}}
-    {{--@endif--}}
     <div class="signIn">
         <div class="signIn-head">
             <img src="/user/test/head_120.png" alt="" class="img-circle">

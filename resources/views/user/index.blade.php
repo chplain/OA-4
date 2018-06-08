@@ -33,7 +33,7 @@
                 <h4 class="header-title m-t-0 m-b-30">收件箱</h4>
                 <div class="inbox-widget nicescroll" style="height: 315px; overflow: hidden; outline: none;" tabindex="5000">
                     @foreach ($infos as $info)
-                        <a href="#">
+                        <a href={{$info->url."?infoId=".$info->id}}>
                             <div class="inbox-item">
                                 <div class="inbox-item-img"><img src={{$info->avatar}} class="img-circle" alt=""></div>
                                 <p class="inbox-item-author">{{$info->nickname}}</p>
@@ -60,7 +60,6 @@
                             <th>开始时间</th>
                             <th>结束时间</th>
                             <th>状态</th>
-                            <th>责任人</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -70,8 +69,17 @@
                                 <td><a href="/user/plan/{{$plan->id}}">{{$plan->title}}</a></td>
                                 <td>{{$plan->created_at}}</td>
                                 <td>{{$plan->deadTime}}</td>
-                                <td><span class="label label-danger">已发布</span></td>
-                                <td>{{$plan->executor}}</td>
+                                <td>
+                                @if($plan->status==0)
+                                    <span class="am-badge am-badge-secondary am-radius">还未开始</span>
+                                @elseif($plan->status==1)
+                                    <span class="am-badge am-badge-secondary am-radius">正在进行</span>
+                                @elseif($plan->status==2)
+                                    <span class="am-badge am-badge-secondary am-radius">已完成</span>
+                                @else
+                                    <span class="am-badge am-badge-secondary am-radius">未完成</span>
+                                @endif
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -13,11 +13,16 @@
     <h4 class="header-title m-t-0 m-b-30">收件箱</h4>
     <div class="inbox-widget nicescroll" style=" overflow: hidden; outline: none;" tabindex="5000">
         @foreach ($infos as $info)
-            <a href="#">
+            <a href={{$info->url."?infoId=".$info->id}}>
                 <div class="inbox-item">
                     <div class="inbox-item-img"><img src={{$info->avatar}} class="img-circle" alt=""></div>
                     <p class="inbox-item-author">{{$info->nickname}}</p>
                     <p class="inbox-item-text">{{$info->content}}</p>
+                    @if($info->status==0)
+                    <p class="inbox-item-text">
+                        <span class="am-badge am-badge-primary">未读</span
+                    </p>
+                    @endif
                     <p class="inbox-item-date">{{$info->created_at}}</p>
                 </div>
             </a>

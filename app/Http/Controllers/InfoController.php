@@ -10,11 +10,10 @@ class InfoController extends Controller
 {
     public function geInfoList(){
         $infos=DB::table('info')
-            ->select('info.id','info.content','info.created_at','users.nickname','users.avatar')
+            ->select('info.id','info.content','info.created_at','users.nickname','users.avatar','info.status','info.url')
             ->leftJoin('users','info.creatorId','=','users.id')
             ->where('info.toUserId','=',session::get('userId'))
             ->orderBy('info.id', 'desc')
-            ->limit(4)
             ->get();
         return view('user.info',['infos'=>$infos]);
     }
@@ -34,6 +33,13 @@ class InfoController extends Controller
             return view();
         }
     }
+
+    public function updateInfo(){
+        DB::table('info')
+            ->where('id', $_REQUEST['infoId'])
+            ->update(['status' => 1]);
+    }
+
 
     public function getNote($id){
         $plan=DB::table('plan')

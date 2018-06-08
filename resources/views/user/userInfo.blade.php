@@ -11,7 +11,9 @@
 @endsection
 
 @section('contents')
-
+@if($users[0]->id !=Session::get('userId'))
+    <?php header('location:/user/index');?>
+    @endif
 <!--    --><?php //var_dump($user);?>
 @foreach($users as $user)
     <h4 class="header-title m-t-0 m-b-30">个人信息</h4>

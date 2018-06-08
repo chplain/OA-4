@@ -19,7 +19,8 @@
  */
 Route::group(['prefix'=>'/'],function(){
     Route::get('/', function () {
-        return view('welcome');
+        //return view('welcome');
+        return view('public.login');
     });
     Route::get('login',function(){
         return view('public.login');
@@ -38,17 +39,13 @@ Route::group(['prefix'=>'/'],function(){
             return view('user.addNote');
         });
         Route::get('planList','planController@getPlanlist');
-        Route::get('addPlan',function(){
-            return view('user.addPlan');
-        });
+        Route::get('addPlan','planController@initialAddPlan');
         Route::get('plan/{id}','planController@getPlan');
         Route::get('pan',function(){
             return view('user.pan');
         });
         Route::get('userInfo/{id}','UserController@userInfo');
-        Route::get('modifyUserInfo',function(){
-            return view('user.modifyUserInfo');
-        });
+        Route::get('modifyUserInfo/{id}', 'UserController@modifyUserInfo');
         Route::get('infoList','InfoController@geInfoList');
         Route::get('addressBooks','addressBooksController@getList');
         Route::get('logout','UserController@logout');
@@ -56,23 +53,12 @@ Route::group(['prefix'=>'/'],function(){
     /**
      * 后端管理页面路由
      */
-    Route::group(['prefix'=>'manage'],function(){
-        Route::get('index',function(){
-            return view('public.login');
-        });
-        Route::get('note',function(){
-            return view('public.register');
-        });
-        Route::get('plan',function(){
-            return view('public.register');
-        });
+    Route::group(['prefix'=>'manager'],function(){
+        Route::get('users','UserController@member');
+        Route::get('ip','ipController@getIpList');
         Route::get('pan',function(){
             return view('public.register');
         });
-        Route::get('userInfo',function(){
-            return view('public.register');
-        });
-
     });
 
 });
@@ -90,13 +76,19 @@ Route::group(['prefix'=>'api'],function(){
         Route::post('delete',function(){});
         Route::post('update',function(){});
     });
+    Route::group(['prefix'=>'ip'],function(){
+        Route::post('upload',function(){});
+        Route::post('download',function(){});
+        Route::post('delete',function(){});
+        Route::get('update','ipController@update');
+    });
     /**
      * 用户信息API
      */
    Route::group(['prefix'=>'user'],function(){
        Route::post('login','UserController@login');
        Route::post('register','UserController@register');
-       Route::post('update','UserController@register');
+       Route::post('update','UserController@update');
        Route::post('delete','UserController@delete');
    });
 
@@ -112,8 +104,17 @@ Route::group(['prefix'=>'api'],function(){
      * 通讯录API
      */
 //   Route::group();
-//    /**
-//     * 短消息公告
-//     */
-//   Route::group();
+    /**
+     * 短消息公告
+     */
+    Route::group(['prefix'=>'info'],function() {
+        Route::post('addPlan','planController@addPlan');
+        Route::post('updateInfo','InfoController@updateInfo');
+        Route::post('delete',function(){});
+    });
+    Route::group(['prefix'=>'plan'],function() {
+        Route::post('addPlan','planController@addPlan');
+        Route::post('updatePlan','planController@updatePlan');
+        Route::post('delete',function(){});
+    });
 });

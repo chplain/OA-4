@@ -15,7 +15,7 @@
                         <div class="col-md-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                                    <a href="/user/pan"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
                                 </li>
                             </ol>
                         </div>
