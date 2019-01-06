@@ -14,13 +14,11 @@ class CreateUserRoleTable extends Migration
     {
         Schema::create('user_role_table', function (Blueprint $table) {
             $table->increments('id')->comment('编号');
-            $table->integer('userId')->unsigned()->comment('用户id');
-            $table->integer('roleId')->unsigned()->comment('角色id');
+            $table->integer('user_id')->unsigned()->comment('用户id');
+            $table->integer('role_id')->unsigned()->comment('角色id');
             $table->timestamps();
-            $table->foreign('userId')->references('id')->on('users');
-            $table->foreign('roleId')->references('id')->on('role');
             //联合索引
-            $table->index(['userId','roleId'])->unique();
+            $table->index(['user_id','role_id'])->unique()->comment('用户对于一个角色只能被授予一次');
         });
     }
 

@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePanTable extends Migration
+class CreateRolePermissionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +13,8 @@ class CreatePanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pan', function (Blueprint $table) {
+        Schema::create('role_permission', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('filename',40)->comment('文件名');
-            $table->char('locate',30)->comment('文件位置');
-            $table->integer('user_id')->unsigned()->comment('上传用户id');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreatePanTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pan');
+        Schema::dropIfExists('role_permission');
     }
 }

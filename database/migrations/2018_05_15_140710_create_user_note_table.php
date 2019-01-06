@@ -14,9 +14,8 @@ class CreateUserNoteTable extends Migration
     {
         Schema::create('user_note', function (Blueprint $table) {
             $table->increments('id')->comment('编号');
-            $table->integer('userId')->unsigned()->comment('用户id');
+            $table->integer('user_id')->unsigned()->comment('用户id');
             $table->text('content')->comment('内容');
-            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }

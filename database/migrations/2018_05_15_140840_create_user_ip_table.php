@@ -14,9 +14,8 @@ class CreateUserIpTable extends Migration
     {
         Schema::create('user_ip', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('userId')->unsigned()->comment('用户id');
+            $table->integer('user_id')->unsigned()->comment('用户id');
             $table->char('ip',25);
-            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }
