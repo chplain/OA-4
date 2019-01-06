@@ -33,7 +33,6 @@ class UserController extends Controller
             ->limit(4)
             ->get();
         return view('user.index',['users'=>$users,'plans'=>$plans,'infos'=>$infos]);
-//        return "123";
     }
 
     public function get_client_ip($type = 0,$client=true)

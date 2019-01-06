@@ -6,7 +6,7 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-
+//运行的起始时间
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -18,7 +18,7 @@ define('LARAVEL_START', microtime(true));
 | our application. We just need to utilize it! We'll simply require it
 | into the script here so that we don't have to worry about manual
 | loading any of our classes later on. It feels great to relax.
-|
+|  自动加载类的脚本
 */
 
 require __DIR__.'/../vendor/autoload.php';

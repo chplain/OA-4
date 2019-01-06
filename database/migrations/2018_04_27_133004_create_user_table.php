@@ -18,7 +18,7 @@ class CreateUserTable extends Migration
             $table->char('email',50)->unique()->comment('email');
             $table->char('password',50)->comment('用户密码');
             $table->char('avatar',50)->nullable()->comment('用户头像');
-            $table->enum('sex',['man','women'])->comment('性别');
+            $table->enum('sex',['male','female'])->comment('性别');
             $table->char('phone',11)->unique()->comment('用户手机号');
             $table->timestamp('birth')->comment('出生日期');
             $table->timestamps();

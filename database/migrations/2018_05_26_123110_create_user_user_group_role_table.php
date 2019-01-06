@@ -15,7 +15,7 @@ class CreateUserUserGroupRoleTable extends Migration
         Schema::create('user_user_group_role', function (Blueprint $table) {
             $table->increments('id')->comment('id');
             $table->integer('user_id')->unsigned()->comment('userGroup_id');
-            $table->integer('userGroup_d')->unsigned()->comment('userGroup_id');
+            $table->integer('userGroup_id')->unsigned()->comment('userGroup_id');
             $table->integer('role_id')->unsigned()->comment('role_id');
             $table->index(['role_id','userGroup_id','user_id'])->unique();
         });

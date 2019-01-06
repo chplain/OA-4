@@ -14,6 +14,7 @@ class CreatePermissionTable extends Migration
     {
         Schema::create('permission', function (Blueprint $table) {
             $table->increments('id')->comment('自增ID');
+            $table->integer('parent_id')->nullable()->comment('父id');
             $table->char('comment',25)->comment('对权限的说明');
         });
     }

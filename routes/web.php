@@ -19,7 +19,6 @@
  */
 Route::group(['prefix'=>'/'],function(){
     Route::get('/', function () {
-        //return view('welcome');
         return view('public.login');
     });
     Route::get('login',function(){

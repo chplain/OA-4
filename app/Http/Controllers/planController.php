@@ -149,12 +149,6 @@ class planController extends Controller
     }
 
     public function initialAddPlan(){
-//        $getGroupMember=DB::table('user_user_group_role')
-//            ->leftJoin('users','user_user_group_role.userId','=','users.id')
-//            ->leftJoin('role','user_user_group_role.roleId','=','role.id')
-//            ->select('users.id','users.nickname','role.role')
-//            ->where('user_user_group_role.userGroupId','=',session::get('userId'))
-//            ->get();
         $getRoleId=DB::table('user_user_group_role')
             ->select('roleId')
             ->where('userId','=',session::get('userId'))
