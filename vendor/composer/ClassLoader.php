@@ -327,7 +327,7 @@ class ClassLoader
 
     /**
      * Finds the path to the file where the class is defined.
-     *
+     *查找定义类的文件的路径。
      * @param string $class The name of the class
      *
      * @return string|false The path if found, false otherwise
