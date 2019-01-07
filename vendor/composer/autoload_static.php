@@ -4169,7 +4169,6 @@ class ComposerStaticInit5960512d55e7d355167b2b28c2b88105
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            //加载各个标准文件的
             $loader->prefixLengthsPsr4 = ComposerStaticInit5960512d55e7d355167b2b28c2b88105::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit5960512d55e7d355167b2b28c2b88105::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit5960512d55e7d355167b2b28c2b88105::$fallbackDirsPsr4;

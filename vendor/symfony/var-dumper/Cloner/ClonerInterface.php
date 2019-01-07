@@ -23,5 +23,5 @@ interface ClonerInterface
      *
      * @return Data The cloned variable represented by a Data object
      */
-    public function cloneVar($var); //克隆变量
+    public function cloneVar($var);
 }

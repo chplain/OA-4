@@ -42,7 +42,7 @@ namespace Composer\Autoload;
  */
 class ClassLoader
 {
-    // PSR-4 标准
+    // PSR-4
     private $prefixLengthsPsr4 = array();
     private $prefixDirsPsr4 = array();
     private $fallbackDirsPsr4 = array();
@@ -57,7 +57,7 @@ class ClassLoader
     private $missingClasses = array();
     private $apcuPrefix;
 
-    public function getPrefixes() //或获取前缀
+    public function getPrefixes()
     {
         if (!empty($this->prefixesPsr0)) {
             return call_user_func_array('array_merge', $this->prefixesPsr0);
@@ -89,7 +89,7 @@ class ClassLoader
     /**
      * @param array $classMap Class to filename map
      */
-    public function addClassMap(array $classMap) //
+    public function addClassMap(array $classMap)
     {
         if ($this->classMap) {
             $this->classMap = array_merge($this->classMap, $classMap);
@@ -327,7 +327,7 @@ class ClassLoader
 
     /**
      * Finds the path to the file where the class is defined.
-     *查找定义类的文件的路径。
+     *
      * @param string $class The name of the class
      *
      * @return string|false The path if found, false otherwise
@@ -367,7 +367,7 @@ class ClassLoader
         return $file;
     }
 
-    private function findFileWithExtension($class, $ext)  //查找指定后缀的文件
+    private function findFileWithExtension($class, $ext)
     {
         // PSR-4 lookup
         $logicalPathPsr4 = strtr($class, '\\', DIRECTORY_SEPARATOR) . $ext;

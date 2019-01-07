@@ -228,14 +228,14 @@ abstract class AbstractCloner implements ClonerInterface
             }
 
             if ($this->prevErrorHandler) {
-                return \call_user_func($this->prevErrorHandler, $type, $msg, $file, $line, $context);
+                return ($this->prevErrorHandler)($type, $msg, $file, $line, $context);
             }
 
             return false;
         });
         $this->filter = $filter;
 
-        if ($gc = gc_enabled()) { //垃圾回收
+        if ($gc = gc_enabled()) {
             gc_disable();
         }
         try {

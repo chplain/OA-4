@@ -3,9 +3,107 @@
   <component name="ChangeListManager">
     <list default="true" id="ad70ce1c-5fb9-4009-9f64-9b4ddc336ecb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/opis/closure/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/opis/closure/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/NOTICE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/opis/closure/NOTICE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/opis/closure/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/src/ReflectionClosure.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/opis/closure/src/ReflectionClosure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Command/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProcessHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProcessHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressBar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressIndicator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressIndicator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/QuestionHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/QuestionHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tester/TesterTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tester/TesterTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/CommandTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/CommandTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Tester/CommandTesterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Tester/CommandTesterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ParserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Translator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Translator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/DebugClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/debug/DebugClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/ErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/debug/ErrorHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/ExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/debug/ExceptionHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/debug/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/WrappedListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/WrappedListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcherInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcherInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventSubscriberInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventSubscriberInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/WrappedListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/WrappedListenerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/CustomFilterIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/CustomFilterIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/SortableIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/SortableIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Tests/FinderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Tests/FinderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Debug/FileLinkFormatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Debug/FileLinkFormatter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/AddAnnotatedClassesToCachePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/AddAnnotatedClassesToCachePass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/DumpDataCollectorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/DumpDataCollectorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TranslatorListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/EventListener/TranslatorListenerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/EsiFragmentRendererTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/EsiFragmentRendererTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/HIncludeFragmentRendererTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/HIncludeFragmentRendererTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/SsiFragmentRendererTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Fragment/SsiFragmentRendererTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpKernelTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/HttpKernelTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/UriSignerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/UriSignerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/UriSigner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/UriSigner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/ExecutableFinder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/ExecutableFinder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Process.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/Process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ExecutableFinderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/Tests/ExecutableFinderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/KillableProcessWithOutput.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/Tests/KillableProcessWithOutput.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ObjectRouteLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ObjectRouteLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher10.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher10.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher11.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher11.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher12.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher12.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher13.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher13.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher8.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher9.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher9.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/UrlMatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/UrlMatcherTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Catalogue/TargetOperation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Catalogue/TargetOperation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Command/XliffLintCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Command/XliffLintCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/PluralizationRules.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/PluralizationRules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/TranslatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/TranslatorInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/AbstractCloner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/AbstractCloner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/ClonerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/ClonerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/VarCloner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/VarCloner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Command/Descriptor/HtmlDescriptor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Command/Descriptor/HtmlDescriptor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Dumper/AbstractDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Dumper/AbstractDumper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Caster/SplCasterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Tests/Caster/SplCasterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/VarDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/VarDumper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,38 +128,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="37" column="104" selection-start-line="37" selection-start-column="104" selection-end-line="37" selection-end-column="104" />
+            <state relative-caret-position="572">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/zend/zend_f.php">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="315" column="9" selection-start-line="315" selection-start-column="9" selection-end-line="315" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="4171" column="20" selection-start-line="4171" selection-start-column="20" selection-end-line="4171" selection-end-column="20" />
+            <state relative-caret-position="266">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -72,8 +152,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/basic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="144" column="9" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/zendframework/zend-diactoros/src/AbstractSerializer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1463">
+              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#348#0#PHP" expanded="true" />
+                <element signature="e#377#414#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="997" column="9" selection-start-line="997" selection-start-column="9" selection-end-line="997" selection-end-column="9" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -89,20 +204,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8322">
-              <caret line="438" column="2" lean-forward="true" selection-start-line="438" selection-start-column="2" selection-end-line="438" selection-end-column="2" />
+            <state relative-caret-position="246">
+              <caret line="218" column="20" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
               <folding>
                 <element signature="e#7#267#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/apcu/apcu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -182,9 +288,9 @@
         <option value="$PROJECT_DIR$/vendor/symfony/var-dumper/VarDumper.php" />
         <option value="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/ClonerInterface.php" />
         <option value="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/AbstractCloner.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
         <option value="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+        <option value="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       </list>
     </option>
   </component>
@@ -409,7 +515,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228903000" />
+    <option name="totallyTimeSpent" value="230751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,22 +558,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/editor.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -703,9 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_files.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -730,33 +817,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="997" column="9" selection-start-line="997" selection-start-column="9" selection-end-line="997" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/zendframework/zend-diactoros/src/AbstractSerializer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1463">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#348#0#PHP" expanded="true" />
+            <element signature="e#377#414#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/basic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="144" column="9" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_files.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8322">
-          <caret line="438" column="2" lean-forward="true" selection-start-line="438" selection-start-column="2" selection-end-line="438" selection-end-column="2" />
+        <state relative-caret-position="246">
+          <caret line="218" column="20" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
           <folding>
             <element signature="e#7#267#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="37" column="104" selection-start-line="37" selection-start-column="104" selection-end-line="37" selection-end-column="104" />
+        <state relative-caret-position="266">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="4171" column="20" selection-start-line="4171" selection-start-column="20" selection-end-line="4171" selection-end-column="20" />
+        <state relative-caret-position="572">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
