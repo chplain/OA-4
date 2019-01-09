@@ -12,7 +12,7 @@ class Arr
 
     /**
      * Determine whether the given value is array accessible.
-     *
+     * 确定给定的值是否为数组或可以想数组接口式的访问
      * @param  mixed  $value
      * @return bool
      */

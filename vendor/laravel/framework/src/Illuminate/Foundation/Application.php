@@ -138,14 +138,14 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
     public function __construct($basePath = null)
     {
         if ($basePath) {
-            $this->setBasePath($basePath);
+            $this->setBasePath($basePath); //设置基础路径
         }
 
-        $this->registerBaseBindings();
+        $this->registerBaseBindings(); //设置基础的绑定
 
-        $this->registerBaseServiceProviders();
+        $this->registerBaseServiceProviders(); //注册基础的服务绑定
 
-        $this->registerCoreContainerAliases();
+        $this->registerCoreContainerAliases(); //注册容器依赖
     }
 
     /**
