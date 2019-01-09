@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad70ce1c-5fb9-4009-9f64-9b4ddc336ecb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Arr.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Arr.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+            <state relative-caret-position="703">
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -304,10 +301,10 @@
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="760" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="962" />
     <option name="y" value="27" />
-    <option name="width" value="1160" />
+    <option name="width" value="958" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -442,12 +439,12 @@
       <workItem from="1546945710603" duration="599000" />
       <workItem from="1546946624233" duration="599000" />
       <workItem from="1547002079408" duration="452000" />
-      <workItem from="1547002687764" duration="6269000" />
+      <workItem from="1547002687764" duration="8223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244777000" />
+    <option name="totallyTimeSpent" value="246731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -459,10 +456,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="760" y="27" width="1160" height="1053" extended-state="0" />
+    <frame x="962" y="27" width="958" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24685816" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21600877" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Gulp" order="3" side_tool="true" />
@@ -831,8 +828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        <state relative-caret-position="703">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>

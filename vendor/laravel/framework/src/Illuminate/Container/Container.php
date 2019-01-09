@@ -12,12 +12,6 @@ use LogicException;
 use ReflectionClass;//类的反射
 use ReflectionParameter;// 反射函数或参数的信息
 
-
-
-
-
-
-
 /**
  * Class Container
  * container 的两个主要的作用:绑定->解析
@@ -31,22 +25,71 @@ use ReflectionParameter;// 反射函数或参数的信息
  *    // 此时 $instance 的 $client 属性已经是 APIClentDecorator 类型了
  *       $instance = $container->make(User::class);
  * 绑定:
- *    绑定单例: singleton
- *    绑定实例: instance
- *    绑定接口到实现: bind(xxInterface::class, xxClass::class) //xxClass为xxInterface的实现
- *    绑定到抽象类和具体类:
+ *    绑定单例:
+ *         singleton
+ *
+ *                $container->singleton(Cache::class, RedisCache::class);
+ *           单例绑定闭包:
+ *                $container->singleton(Database::class, function (Container $container) {
+ *                  return new MySQLDatabase('localhost', 'testdb', 'user', 'pass');
+ *                });
+ *            绑定具体类:
+ *                $container->singleton(MySQLDatabase::class);
+ *         绑定实例: instance
+ *             重复使用已有的实例，用 instance()方法
+ *              $container->instance(Container::class, $container);//Laravel就是用这种方法来确保每次获取到的都是同一个 Container实例
+ *                   Container 还可以用来保存任何值，例如 configuration 数据：
+ *                     $container->instance('database.name', 'testdb');
+ *                      $db_name = $container->make('database.name');
+ *                      数组访问:
+ *                         $container['database.name'] = 'testdb';
+ *                         $db_name = $container['database.name'];
+ *                      数组访问语法还可以代替 make() 来实例化对象：
+ *                         $db = $container['database'];
+ *    bind(每次解析时都会新实例化一个对象(或重新调用闭包)):
+ *         绑定接口到实现: bind(xxInterface::class, xxClass::class) //xxClass为xxInterface的实现
+ *         绑定到抽象类和具体类:
  *                抽象类:bind(MyAbstract::class,MyConcreteClass::class)
  *                具体类:bind(MyDatabase::class,CustomMysqlDatabase::class) CustomMysql继承与MyDatabase
- *    自定义绑定:
+ *         自定义绑定:
  *             将bind的第二个参数换为Closure bind(database:class,function(Container $container){})
- *     绑定任意名称(只能用 make() 来获取实例):
+ *         绑定任意名称(只能用 make() 来获取实例):
  *             $container->bind('database', MySQLDatabase::class);
  *             $db = $container->make('database');
  *
- *    绑定初始数据
- *    情景绑定
- *    tag绑定
+ *         绑定初始数据
+ *         情景绑定
+ *         tag绑定tag()://将实例关系到标记
+ *              $container->tag(MyPlugin::class, 'plugin');
+ *              $container->tag(AnotherPlugin::class, 'plugin');
+ *           以数组的形式取回所有「标记」的实例：
+ *             foreach ($container->tagged('plugin') as $plugin) {
+ *                     $plugin->init();
+ *               }
+ *             tag() 方法的两个参数都可以接受数组：
+ *                  $container->tag([MyPlugin::class, AnotherPlugin::class], 'plugin');
+ *                  $container->tag(MyPlugin::class, ['plugin', 'plugin.admin']);
+ *
+ *
+ *
+ *       bindMethod()方法绑定:
+ *
+ *       上下文绑定
+ *
+ *
  * 解析:
+ *   make:
+ * class MyClass
+ *  {
+ *    private $dependency;
+ *    public function __construct(AnotherClass $dependency)
+ *   {
+ *    $this->dependency = $dependency;
+ *   }
+ * }
+ *    $instance = $container->make(MyClass::class);
+ *    Container 会自动实例化依赖的对象，所以它等同于：
+           $instance = new MyClass(new AnotherClass());
  *
  * 回调:
  *    使用resolving()注册callback(回调函数),在绑定的类解析后调用,不用重新绑定
